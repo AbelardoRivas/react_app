@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hola, soy una aplicación de React</h1>
-        <button onClick={this.cambiarValorHandler.bind(this, '¡Abelardo!')}>Cambiar Nombre</button>
+        <button onClick={this.cambiarValorHandler.bind(this, '¡Abelardo!')} className="boton">Cambiar Nombre</button>
         <Persona 
           nombre={this.state.array_de_personas[0].nombre} 
           edad={this.state.array_de_personas[0].edad}
