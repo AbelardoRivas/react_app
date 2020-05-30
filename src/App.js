@@ -19,6 +19,15 @@ class App extends Component {
     })
   }
 
+  cambiarNombreHandler = (event) => {
+    this.setState({
+      array_de_personas: [
+        { nombre: event.target.value, edad: 22 },
+        { nombre: 'Manuel', edad: 23}
+      ]
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -27,7 +36,8 @@ class App extends Component {
         <Persona 
           nombre={this.state.array_de_personas[0].nombre} 
           edad={this.state.array_de_personas[0].edad}
-          click={this.cambiarValorHandler} >Mis hobbies: Correr
+          click={this.cambiarValorHandler}
+          cambiar={this.cambiarNombreHandler} >Mis hobbies: Correr
         </Persona>
         <Persona 
           nombre={this.state.array_de_personas[1].nombre} 
